@@ -13,7 +13,7 @@ output:
 
 In this lab, you will explore the dataset `faithful`. It contains information about eruptions of the Old Faithful geyser in Yellowstone National Park. The first few observations are listed below.
 
-```{r}
+```{r, warning=FALSE,message=FALSE}
 library(tidyverse)
 library(datasets)
 faithful |> 
@@ -62,13 +62,24 @@ Two scientists studying the waiting times between eruptions at Old Faithful have
 
 ### Question 3: (2 pts)
 
-Create a histogram of each variable with the function `hist()`. (You can find the help page for `hist()` by calling `?hist` at the console.) Make sure to label axes (`xlab=`) and give a title to the graph (`main=`).
+Create a tabulation of each variable with the function `cut_number()` along with `mutate()`. (You can find the help page for `cut_number()` by calling `?cut_number` at the console.) 
+
+Modify the code below to create a tabulation of the `eruptions` variable using 10 categories.
+
 
 ```{r}
 # your code goes below (make sure to edit comment)
-
+faithful |> 
+    mutate(eruptions_cat = cut_number(eruptions, 5)) |> 
+    group_by(eruptions_cat) |> 
+    count()
 ```
 
+Write code to make a tabulation of the `waiting` variable using 8 categories.
+
+```{r}
+# your code goes below (make sure to edit comment)
+```
 ------------------------------------------------------------------------
 
 ### Question 4: (2 pts)
@@ -105,18 +116,12 @@ Compare the two means. How do the means change with the eruption time being less
 
 ### Question 6: (2 pts)
 
-Create a scatterplot using the `ggplot()` function below to explore how the waiting time might be related to the eruption duration. Make sure to change the axis labels and the title for the graph to something more directly related to the data being plotted. 
+Use tabulation techniques to explore how the waiting time might be related to the eruption duration eruption time. Divide the `waiting` variable into 10 categories using `cut_number()` and compute the mean of the `eruptions` variable within each category using `summarize()` and `mean()`. 
 
-Briefly describe what you notice in this graph.
+Describe what you see in the tabulation output. Does your interpretation of the tabulation change if you change the number of categories to be more or less than 10?
 
 ```{r}
 # your code goes below (make sure to edit comment)
-faithful |> 
-    ggplot(aes(x = waiting, y = eruptions)) + 
-    geom_point() + 
-    labs(x = "X Axis Label",
-         y = "Y Axis Label",
-         title = "Plot Title")
 ```
 
 **Your answer goes here. Write sentences in bold.**
