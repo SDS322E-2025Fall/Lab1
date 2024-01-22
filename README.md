@@ -18,7 +18,7 @@ You can open the Lab in RStudio using the following steps:
 
 4. Under "Repository URL", enter the web site URL for this lab: https://github.com/SDS322E/Lab1
 
-5. Under "Project directory name", enter **Lab 1**. (RStudio may automatically put this into the box for you.)
+5. Under "Project directory name", enter **Lab1**. (RStudio may automatically put this into the box for you.)
 
 6. Ignore the last box.
 
