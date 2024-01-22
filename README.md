@@ -20,6 +20,6 @@ You can open the Lab in RStudio using the following steps:
 
 5. Under "Project directory name", enter **Lab1**. (RStudio may automatically put this into the box for you.)
 
-6. Ignore the last box.
+6. You may choose to select a directory to store the project or you can use the default.
 
 7. Click "Create Project".
