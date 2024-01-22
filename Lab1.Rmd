@@ -14,6 +14,8 @@ output:
 In this lab, you will explore the dataset `faithful`. It contains information about eruptions of the Old Faithful geyser in Yellowstone National Park. The first few observations are listed below.
 
 ```{r, warning=FALSE,message=FALSE}
+## Load the R packages that you will need for this Lab
+
 library(tidyverse)
 library(datasets)
 faithful |> 
@@ -26,7 +28,7 @@ The first goal is to determine how many rows and columns are in the dataset. Wit
 
 **Your answer goes here. Write sentences in bold.**
 
-Try using the `glimpse()` function from the `tidyverse`. How many rows and columns does the `glimpse()` function report for the `faithful` dataset? Which lab member came the closest to what `glimpse()` reports?
+Try using the `glimpse()` function from the `tidyverse` on the `faithful` dataset. How many rows and columns does the `glimpse()` function report for the `faithful` dataset? Which lab member came the closest to what `glimpse()` reports?
 
 ```{r}
 # your code goes below (make sure to edit comment)
@@ -52,9 +54,12 @@ Using the function `summary()` for each variable, find the minimum, maximum, mea
 
 ```
 
+
 **Your answer goes here. Write sentences in bold.**
 
-Two scientists studying the waiting times between eruptions at Old Faithful have different theories of the mean waiting time between eruptions. Scientist A hypothesizes that the true mean waiting time is 50 minutes while Scientist B hypothesizes that the true mean waiting time is 75 minutes. When considering the output of the `summary()` function, which hypothesis seems more likely according to the data (A or B)?
+Two scientists studying the waiting times between eruptions at Old Faithful have different theories of the mean waiting time between eruptions. Scientist A hypothesizes that the true mean waiting time is 50 minutes while Scientist B hypothesizes that the true mean waiting time is 75 minutes. 
+
+When considering the output of the `summary()` function, which hypothesis seems more likely according to the data (A or B)?
 
 **Your answer goes here. Write sentences in bold.**
 
@@ -62,24 +67,27 @@ Two scientists studying the waiting times between eruptions at Old Faithful have
 
 ### Question 3: (2 pts)
 
-Create a tabulation of each variable with the function `cut_number()` along with `mutate()`. (You can find the help page for `cut_number()` by calling `?cut_number` at the console.) 
+Create a new variable with the function `cut_number()` along with `mutate()`. (You can find the help page for `cut_number()` by calling `?cut_number` at the console.) 
 
-Modify the code below to create a tabulation of the `eruptions` variable using 10 categories.
 
+The code below divides the `eruptions` variable into 5 categories and stores the categories in a new variable called `eruptions_cat`. Modify the code below to create a tabulation of the `eruptions` variable using 10 categories.
 
 ```{r}
 # your code goes below (make sure to edit comment)
 faithful |> 
-    mutate(eruptions_cat = cut_number(eruptions, 5)) |> 
-    group_by(eruptions_cat) |> 
-    count()
+    mutate(eruptions_cat = cut_number(eruptions, 5)) 
 ```
 
-Write code to make a tabulation of the `waiting` variable using 8 categories.
+
+Extend the code above to divide the `waiting` variable into 8 categories and create a new variable called `waiting_cat`.
 
 ```{r}
 # your code goes below (make sure to edit comment)
+
 ```
+
+
+
 ------------------------------------------------------------------------
 
 ### Question 4: (2 pts)
@@ -103,7 +111,7 @@ Using filtering and logical indexing and the function `mean()`, find
 
 -   the mean of the variable `eruptions` when `waiting` is **more than** 1 hour.
 
-Compare the two means. How do the means change with the eruption time being less than or equal to or greater than 1 hour?
+Compare the two means. How do the means change with the waiting time being less than or equal to or greater than 1 hour?
 
 ```{r}
 # your code goes below (make sure to edit comment)
@@ -116,15 +124,18 @@ Compare the two means. How do the means change with the eruption time being less
 
 ### Question 6: (2 pts)
 
-Use tabulation techniques to explore how the waiting time might be related to the eruption duration eruption time. Divide the `waiting` variable into 10 categories using `cut_number()` and compute the mean of the `eruptions` variable within each category using `summarize()` and `mean()`. 
+Use tabulation techniques to explore how the waiting time might be related to the eruption duration eruption time. Divide the `waiting` variable into 10 categories using `cut_number()` and compute the mean of the `eruptions` variable within each category using, `group_by()`, `summarize()` and `mean()`. 
 
 Describe what you see in the tabulation output. Does your interpretation of the tabulation change if you change the number of categories to be more or less than 10?
 
 ```{r}
 # your code goes below (make sure to edit comment)
+
 ```
 
 **Your answer goes here. Write sentences in bold.**
+
+
 
 ### Question 7: (2 pts)
 
@@ -134,7 +145,7 @@ Consider the following hypotheses about the relationship between waiting time an
 
 - The waiting time between eruptions and the eruption length have no relationship at all. 
 
-Given the data shown in the plot from Question 6, which of the two hypotheses is more likely?
+Given the data shown in the tabulation from Question 6, which of the two hypotheses is more likely?
 
 
 **Your answer goes here. Write sentences in bold.**
@@ -145,10 +156,14 @@ Given the data shown in the plot from Question 6, which of the two hypotheses is
 
 Render your file! You can
 
--   Render your file into pdf directly or
+1. Render your file into HTML by running the Knit command in RStudio (clicking the "Knit" button above the editor)
 
--   Render your file into html and then print as PDF.
+2. Once it renders in HTML, click on `Open in Browser` at the top left of the window that pops out. (Alternatively, you can open the HTML file in your browser directly.)
 
-Is it working? If not, try to decipher the error message (look up the error message, consult websites such as [stackoverflow](https://stackoverflow.com/) or [crossvalidated](https://stats.stackexchange.com/)).
+3. Print your HTML file into PDF from your browser. 
 
-Once it renders in html, click on `Open in Browser` at the top left of the window pops out. Print your html file into pdf from your browser. Any issue? Ask your classmates or a TA!
+4. Upload your PDF file to Gradescope.
+
+5. Remember to add your **group members** to the assignment submission.
+
+6. Remember to mark the pages that correspond to each question!
