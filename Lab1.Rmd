@@ -156,14 +156,10 @@ Given the data shown in the tabulation from Question 6, which of the two hypothe
 
 Render your file! You can
 
-1. Render your file into HTML by running the Knit command in RStudio (clicking the "Knit" button above the editor)
+1. Render your file into PDF by running the Knit command in RStudio (clicking the "Knit" button above the editor)
 
-2. Once it renders in HTML, click on `Open in Browser` at the top left of the window that pops out. (Alternatively, you can open the HTML file in your browser directly.)
+2. Upload your PDF file to Gradescope.
 
-3. Print your HTML file into PDF from your browser. 
+3. Remember to add your **group members** to the assignment submission.
 
-4. Upload your PDF file to Gradescope.
-
-5. Remember to add your **group members** to the assignment submission.
-
-6. Remember to mark the pages that correspond to each question!
+4. Remember to mark the pages that correspond to each question!
