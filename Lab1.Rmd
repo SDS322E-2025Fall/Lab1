@@ -1,8 +1,6 @@
 ---
 title: "Lab 1"
-output:
-  html_document: default
-  pdf_document: default
+output: pdf_document
 ---
 
 ### Enter the names of the group members below: (2 pts)
@@ -43,8 +41,6 @@ In which units are the variables reported? You will need more information about 
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
-
 ### Question 2: (2 pts)
 
 Using the function `summary()` for each variable, find the minimum, maximum, mean, and median values of each variable. Write a sentence to interpret the mean eruption duration and the mean waiting time.
@@ -62,8 +58,6 @@ Two scientists studying the waiting times between eruptions at Old Faithful have
 When considering the output of the `summary()` function, which hypothesis seems more likely according to the data (A or B)?
 
 **Your answer goes here. Write sentences in bold.**
-
-------------------------------------------------------------------------
 
 ### Question 3: (2 pts)
 
@@ -87,9 +81,6 @@ Extend the code above to divide the `waiting` variable into 8 categories and cre
 ```
 
 
-
-------------------------------------------------------------------------
-
 ### Question 4: (2 pts)
 
 Let's do some filtering and logical indexing. What does the code below do?
@@ -100,8 +91,6 @@ faithful |>
 ```
 
 **Your answer goes here. Write sentences in bold.**
-
-------------------------------------------------------------------------
 
 ### Question 5: (2 pts)
 
@@ -120,7 +109,6 @@ Compare the two means. How do the means change with the waiting time being less 
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 6: (2 pts)
 
@@ -150,20 +138,15 @@ Given the data shown in the tabulation from Question 6, which of the two hypothe
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Formatting: (4 pts)
 
 Render your file! You can
 
-1. Render your file into HTML by running the Knit command in RStudio (clicking the "Knit" button above the editor)
+1. Render your file into PDF by running the Knit command in RStudio (clicking the "Knit" button above the editor)
 
-2. Once it renders in HTML, click on `Open in Browser` at the top left of the window that pops out. (Alternatively, you can open the HTML file in your browser directly.)
+2. Upload your PDF file to Gradescope.
 
-3. Print your HTML file into PDF from your browser. 
+3. Remember to add your **group members** to the assignment submission.
 
-4. Upload your PDF file to Gradescope.
-
-5. Remember to add your **group members** to the assignment submission.
-
-6. Remember to mark the pages that correspond to each question!
+4. Remember to mark the pages that correspond to each question!
